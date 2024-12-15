@@ -36,6 +36,22 @@
  * @filesource
  */
 
+ // Composer Autoloader
+require_once __DIR__ . '/vendor/autoload.php';
+
+// Load .env file
+require_once __DIR__ . '/system/dotenv/autoloader.php';
+
+// Load .env file
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+
+// var_dump(getenv('DB_HOST'), getenv('DB_USERNAME'), getenv('DB_PASSWORD'), getenv('DB_NAME'));
+// echo getenv('DB_USERNAME');
+// exit;
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -53,7 +69,8 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	// define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', isset($_ENV['CI_ENV']) ? $_ENV['CI_ENV'] : 'development');
 
 /*
  *---------------------------------------------------------------

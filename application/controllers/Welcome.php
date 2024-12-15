@@ -21,5 +21,16 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
+
+		// ci_session db table 조회하기
+		// $this->load->database();
+		// $query = $this->db->query('SELECT * FROM ci_sessions');
+		// foreach ($query->result() as $row)
+		// {
+		// 	echo $row->id;
+		// 	echo $row->ip_address;
+		// 	echo $row->timestamp;
+		// 	echo $row->data;
+		// }
 	}
 }
