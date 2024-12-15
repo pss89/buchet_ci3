@@ -1,0 +1,30 @@
+# OS별 임시 파일
+.DS_Store
+Thumbs.db
+
+# CI3 캐시 및 로그
+application/cache/*
+application/logs/*
+
+# CI3 업로드 디렉토리
+uploads/*
+
+# 환경별 설정
+.env
+
+# Composer 의존성
+vendor/
+
+# IDE 및 편집기 파일
+.idea/
+*.swp
+*.swo
+*.bak
+
+# Node.js (만약 사용 중이라면)
+node_modules/
+
+# 기타 임시 파일
+*.log
+*.tmp
+*.~*
